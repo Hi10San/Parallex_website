@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'roboto', sans-serif;
+    /* background: rgb(2, 62, 94); */
+    perspective: 1000px;
+    background-image: url(img/backgroundimg.jpg);
+    background-repeat: no-repeat;
+    /* width: 100%;
+    height: 100%; */
+}
+
+.card{
+    width: 300px;
+    height: 450px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1s;
+}
+
+.card-img1{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(img/imgg.jpg);
+    background-size: cover;
+    border-radius: 20px;
+    transform: translateZ(40px);
+    /* filter: blur(8px);
+  -webkit-filter: blur(8px); */
+}
+
+.card-body{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, -40px) rotateY(180deg);
+    width: 85%;
+    height: 87%;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 5px solid #fff;
+    
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+    opacity: 3;
+    /* filter: blur(8px);
+  -webkit-filter: blur(8px); */
+}
+
+.card:hover::after{
+    filter: blur(800px);
+  -webkit-filter: blur(800px);
+   /* background-color: white; */
+
+}
+.card-body .bg{
+    position: absolute;
+    background: #fff;
+    border-radius: 100px;
+    width: 0%;
+    transition: .5s;
+    
+}
+
+.card-body .bg:nth-child(1){
+    height: 100%;
+    transform-origin: left;
+    background-color: #FFFDF4;
+    top: 0;
+    left: -30%;
+    transform: rotate(-10deg);
+}
+card-body .bg:nth-child(2){
+    height: 50%;
+    transform-origin: right;
+    top: 5%;
+    right: -30%;
+    transform: rotate(-10deg);
+    
+}
+
+.card-body .bg:nth-child(3){
+    height: 50%;
+    transform-origin: left;
+    top: 70%;
+    left: -30%;
+    transform: rotate(-10deg);
+    filter: blur(800px);
+  -webkit-filter: blur(800px);
+}
+
+.card:hover .card-body .bg{
+    width: 200%;
+    transition-delay: 1s;
+    
+    
+}
+
+.card:hover .card-body .bg:nth-child(2){
+    transition-delay: 1.5s;
+}
+
+.card:hover .card-body .bg:nth-child(3){
+    transition-delay: 2s;
+}
+.content{
+    position: relative;
+    opacity: 0;
+    transition: .5s;
+    padding: 40px 10px;
+    text-align: center;
+}
+
+.title{
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #292929;
+    text-transform: uppercase;
+}
+.card:hover .content{
+    opacity: 4;
+    transition-delay: 2.5s;
+}
+
+.card-img2{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(img/ayodhya.jpg);
+    background-size: cover;
+    border-radius: 20px;
+    transform: translateZ(40px);
+
+}
+.card-img2:hover:after{
+    filter: blur(800px);
+    -webkit-filter: blur(800px);
+}
+
+
+.card-img3{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(img/img.jpg);
+    background-size: cover;
+    border-radius: 20px;
+    transform: translateZ(40px);
+    /* filter: blur(8px);
+  -webkit-filter: blur(8px); */
+}
+
+#card-body2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, -40px) rotateY(180deg);
+    width: 85%;
+    height: 87%;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 5px solid #fff;
+    
+    
+}
+.card-img4{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(img/kash.jpg);
+    background-size: cover;
+    border-radius: 20px;
+    transform: translateZ(40px);
+    /* filter: blur(8px);
+  -webkit-filter: blur(8px); */
+}
